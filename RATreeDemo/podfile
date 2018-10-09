@@ -1,0 +1,5 @@
+platform :ios, '8.0'
+target 'RATreeDemo' do
+pod 'RATreeView', '~> 2.1.2'
+pod 'MJExtension', '~> 3.0.15.1'
+end
