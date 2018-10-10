@@ -214,8 +214,6 @@
 - (void)treeView:(RATreeView *)treeView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowForItem:(id)item {
     
     NSLog(@"编辑了实现的方法");
-    
-    
 }
 
 //....没看懂啥意思
