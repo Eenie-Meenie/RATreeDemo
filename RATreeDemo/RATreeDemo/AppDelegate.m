@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "FMDBViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,9 +22,26 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    self.window.rootViewController = naVC;
+    mainVC.title = @"Tree";
+    
+    FMDBViewController *fmdbVC = [[FMDBViewController alloc] init];
+    UINavigationController *naVC2 = [[UINavigationController alloc] initWithRootViewController:fmdbVC];
+    fmdbVC.title = @"FMDB";
+    
+    UITabBarController *tabVC = [[UITabBarController alloc] init];
+    tabVC.viewControllers = @[naVC, naVC2];
+    
+    self.window.rootViewController = tabVC;
+    
+    
+    
+    
     return YES;
 }
 
